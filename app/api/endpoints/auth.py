@@ -40,8 +40,8 @@ async def login(
     """
     Get an access token for future requests.
     """
-    print("Form data:", form_data)
-    print(form_data)
+    
+    
     user = await authenticate_user(db, email=form_data.username, password=form_data.password)
     if not user:
         raise HTTPException(
